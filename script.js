@@ -7,7 +7,7 @@ const cells = document.querySelectorAll(".cell");
 
 let player1 = "";
 let player2 = "";
-let currentPlayer = "X";
+let currentPlayer = "x";
 let gameOver = false;
 
 const winningCombinations = [
@@ -36,14 +36,14 @@ cells.forEach(cell => {
     if (checkWinner()) {
       gameOver = true;
       messageDiv.textContent =
-        `${currentPlayer === "X" ? player1 : player2} congratulations you won!`;
+        `${currentPlayer === "x" ? player1 : player2} congratulations you won!`;
       highlightWinner();
       return;
     }
 
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    currentPlayer = currentPlayer === "x" ? "o" : "x";
     messageDiv.textContent =
-      `${currentPlayer === "X" ? player1 : player2}, you're up`;
+      `${currentPlayer === "x" ? player1 : player2}, you're up`;
   });
 });
 
